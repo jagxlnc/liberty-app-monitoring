@@ -69,7 +69,7 @@ objects:
             failureThreshold: 3
             httpGet:
               path: /
-              port: 8080
+              port: 9080
               scheme: HTTP
             initialDelaySeconds: 3
             periodSeconds: 10
@@ -129,7 +129,7 @@ objects:
     name: ${APP_NAME}
   spec:
     port:
-      targetPort: web
+      targetPort: https
     to:
       kind: Service
       name: ${APP_NAME}
