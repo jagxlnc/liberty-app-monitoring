@@ -130,6 +130,8 @@ objects:
   spec:
     port:
       targetPort: https
+    tls:
+      termination: passthrough
     to:
       kind: Service
       name: ${APP_NAME}
